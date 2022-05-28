@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/ant.jar"/>
+	<classpathentry kind="lib" path="lib/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/jregistrykey-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/samskivert-1.4.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/jxbrowser-5.4.3.jar"/>
+	<classpathentry kind="lib" path="lib/jxbrowser-mac-5.4.3.jar"/>
+	<classpathentry kind="lib" path="lib/jxbrowser-win-5.4.3.jar"/>
+	<classpathentry kind="lib" path="lib/runtime.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

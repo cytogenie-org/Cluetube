@@ -1,3 +1,10 @@
+# Ignore CVS, Eclipse and any other files & folders that you want to exclude in your commit
+CVS/
+/bin/
+/.settings/
+/classes/
+/lib/
+
 # Compiled class file
 *.class
 

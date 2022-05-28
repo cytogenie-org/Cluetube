@@ -1,0 +1,50 @@
+/* 
+    Document   : HelpStyle
+    Created on : Jul 21, 2009, 1:46:19 PM
+    Author     : cate
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+    font-family: Arial, "Gill Sans", Times, "Century Gothic", san-serif;
+}
+.backtotop{
+    margin-left:2em;
+    color:green;
+    text-decoration:none;
+    font-style:italic;
+
+}
+
+.helpTopicHeader {
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 1em;
+    text-decoration: underline;
+
+}
+.helpTopicText {
+    text-align: left;
+    margin-left: 3em;
+}
+.tableofcontents {
+    font-weight: bold;
+    text-align: left;
+    margin-left: 2em;
+    color: blue;
+}
+ol {
+    margin-left:3em;
+}
+ul.circle {
+        list-style-type:circle
+    }
+

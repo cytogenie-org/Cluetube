@@ -1,0 +1,83 @@
+<project>
+	
+	<target name="cluetube">
+		      <javac includeantruntime="false" srcdir="src"
+		            destdir="classes"
+		            classpath="lib/jxbrowser-5.4.3.jar"
+		      		includes="src/com/help/*.java"
+		            source="1.6"
+		            />
+				<copy todir="classes/com/help">
+			      <fileset dir="src/com/help">
+					<include name="**/*.properties"/>
+			      </fileset>
+			    </copy>
+				<copy todir="classes/com/help">
+					      <fileset dir="src/com/help">
+							<include name="**/*.jpg"/>
+					      	<include name="**/*.gif"/>
+					      </fileset>
+				</copy>
+		      <jar destfile="lib/cluetube.jar"
+		        basedir="classes"
+				update="true"
+		        includes="com/help/*.class">
+		      	<manifest>
+		      	   <attribute name="Main-Class" value="com.help.ClueTube" />
+		      	   <attribute name="Class-Path" value="jxbrowser-5.4.3.jar jxbrowser-mac-5.4.3.jar jxbrowser-win-5.4.3.jar runtime.jar" />
+		        </manifest>
+			  </jar>
+		  </target>
+	
+	<target name="getdown">
+			<java classname="com.MeehanMetaSpace.Basics"
+	  	  	          classpath="${libdir}/mmsBasics.jar"
+	  	  	          fork="true"
+	  	  	          dir="${srcdir}/com/threerings/getdown">
+	  	  	    <arg line="com.threerings.getdown"/>
+		    </java>
+		      <javac includeantruntime="false" srcdir="${srcdir}"
+		            destdir="${FacsXpertHome}/classes"
+		            classpath="${libdir}/jregistrykey-1.0.jar;
+		                       ${libdir}/samskivert-1.4.jar;
+		                       ${libdir}/ant.jar;
+		                       ${libdir}/commons-codec-1.4.jar"
+		      		includes="com/threerings/getdown/*.java
+		      				  com/threerings/getdown/data/*.java
+		      				  com/threerings/getdown/launcher/*.java
+		      				  com/threerings/getdown/net/*.java
+		      				  com/threerings/getdown/tools/*.java
+		      				  com/threerings/getdown/util/*.java"
+		            source="1.6"
+		            />
+				<copy todir="${FacsXpertHome}/classes/com/threerings/getdown">
+			      <fileset dir="${comdir}/threerings/getdown">
+					<include name="**/*.properties"/>
+			      </fileset>
+			    </copy>
+				<copy todir="${FacsXpertHome}/classes/com/threerings/getdown/launcher/images">
+					      <fileset dir="${comdir}/threerings/getdown/launcher/images">
+							<include name="**/*.jpg"/>
+					      	<include name="**/*.gif"/>
+					      </fileset>
+				</copy>
+		      <jar destfile="${libdir}/getdown.jar"
+		        basedir="${FacsXpertHome}/classes"
+				update="true"
+		        includes="com/threerings/getdown/*.class
+		      			  com/threerings/getdown/*.properties
+		      			  com/threerings/getdown/data/*.class
+		      			  com/threerings/getdown/launcher/*.class
+		      			  com/threerings/getdown/net/*.class
+		      			  com/threerings/getdown/tools/*.class
+		      			  com/threerings/getdown/util/*.class
+		      			  com/threerings/getdown/*.properties
+						  com/threerings/getdown/launcher/images/*.gif
+		      			  com/threerings/getdown/launcher/images/*.jpg">
+		      	<manifest>
+		      	   <attribute name="Main-Class" value="com.threerings.getdown.launcher.GetdownApp" />
+		      	   <attribute name="Class-Path" value="ant.jar commons-codec-1.4.jar jregistrykey-1.0.jar samskivert-1.4.jar" />
+		        </manifest>
+			  </jar>
+		  </target>
+</project>
